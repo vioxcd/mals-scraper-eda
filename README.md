@@ -7,6 +7,10 @@ usage:
 3. extract-profile: extract anime and manga stats from user profile
 4. check-list-access: checks whether anime and manga list could be accessed. case when it can't include badresult (private list) or incompatible data table
 
+data flow:
+
+```link (dedup) -> profile (sampled) -> username -> access (inaccessible marked) -> lists```
+
 etc
 
 - extract-online-users: manual javascript extractor

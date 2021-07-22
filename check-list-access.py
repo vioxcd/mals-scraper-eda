@@ -8,7 +8,7 @@ from tqdm import tqdm
 ANIME_LINK = 'https://myanimelist.net/animelist/'
 MANGA_LINK = 'https://myanimelist.net/mangalist/'
 IN_FILE = f'{os.getcwd()}/data/sampled-username.list'
-OUT_FILE = f'{os.getcwd()}/data/dump-sampled-list.list'
+OUT_FILE = f'{os.getcwd()}/data/sampled-access-list.list'
 USERS = []
 
 def soupify(link):
