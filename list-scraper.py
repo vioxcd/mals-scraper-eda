@@ -28,8 +28,15 @@ OFFSET = 300
 USERS_OFFSET = []
 
 def fetch(link):
-	payload = requests.get(link)
-	return payload.json()
+	ret = []
+
+	try:
+		payload = requests.get(link)
+		ret = payload.json()
+	except:
+		print(f'ERROR ON {link}')
+
+	return ret
 
 def load_user_offset(PATH = IN_FILE):
 	with open(PATH, 'r') as f:
