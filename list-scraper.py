@@ -29,9 +29,7 @@ def fetch(link):
 	payload = requests.get(link)
 	return payload.json()
 
-def load_data(PATH = IN_FILE):
-	C = 0
-
+def load_user_offset(PATH = IN_FILE):
 	with open(PATH, 'r') as f:
 		for line in f:
 			data = line.strip().split(',') 
@@ -40,15 +38,11 @@ def load_data(PATH = IN_FILE):
 				'total_anime': int(data[1]),
 				'total_manga': int(data[2]),
 			})
-			C += 1
-
-			if C == 5:
-				break
 	return DATA
 
 if __name__ == '__main__':
 	# load data
-	data = load_data()
+	data = load_user_offset()
 
 	# prep out file
 	with open(OUT_FILE, 'w') as f:
