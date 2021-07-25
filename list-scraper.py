@@ -42,7 +42,12 @@ def load_user_offset(PATH = IN_FILE):
 
 if __name__ == '__main__':
 	# load data
-	data = load_user_offset()
+	# data = load_user_offset()
+	data = [{
+		'username': 'rex_chan_s',
+		'total_anime': 58,
+		'total_manga': 56,
+		}]
 
 	# prep out file
 	with open(OUT_FILE, 'w') as f:
