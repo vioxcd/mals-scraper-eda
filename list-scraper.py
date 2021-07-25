@@ -35,7 +35,7 @@ def load_user_offset(PATH = IN_FILE):
 			data = line.strip().split(',') 
 			DATA.append({
 				'username': data[0],
-				'total_anime': int(data[1]),
+				'total_anime': int(data[1]), # used for comparison operation
 				'total_manga': int(data[2]),
 			})
 	return DATA
