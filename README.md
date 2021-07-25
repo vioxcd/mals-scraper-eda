@@ -1,4 +1,4 @@
-# Prototyping Cross-domain recommendation
+# Mals Anime & Manga List Scraper
 
 usage:
 
