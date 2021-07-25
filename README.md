@@ -9,7 +9,7 @@ usage:
 
 data flow (in csv):
 
-```link (dedup) -> profile (sampled) -> username -> access (inaccessible marked) -> list-offset -> lists```
+```link (dedup) -> all profile -> filtered profile (anime & manga days > 1) -> username -> access (inaccessible marked) -> offset -> lists```
 
 etc
 
