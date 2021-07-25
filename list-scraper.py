@@ -9,6 +9,7 @@ result:
 	"anime_id": 2810,
 """
 
+import json
 import os
 
 import requests
@@ -25,9 +26,9 @@ OUT_FILE = f'{os.getcwd()}/data/sampled-lists.csv'
 OFFSET = 300
 DATA = []
 
-
-def soupify(link):
-	page = requests.get(link)
+def fetch(link):
+	payload = requests.get(link)
+	return payload.json()
 	return BeautifulSoup(page.content, 'html.parser')
 
 def load_data(PATH = IN_FILE):
