@@ -23,7 +23,7 @@ IN_FILE = f'{os.getcwd()}/data/sampled-username-offset.csv'
 OUT_FILE = f'{os.getcwd()}/data/sampled-lists.csv'
 
 OFFSET = 300
-DATA = []
+USERS_OFFSET = []
 
 def fetch(link):
 	payload = requests.get(link)
@@ -33,17 +33,17 @@ def load_user_offset(PATH = IN_FILE):
 	with open(PATH, 'r') as f:
 		for line in f:
 			data = line.strip().split(',') 
-			DATA.append({
+			USERS_OFFSET.append({
 				'username': data[0],
 				'total_anime': int(data[1]), # used for comparison operation
 				'total_manga': int(data[2]),
 			})
-	return DATA
+	return USERS_OFFSET
 
 if __name__ == '__main__':
 	# load data
-	# data = load_user_offset()
-	data = [{
+	# user_offset = load_user_offset()
+	user_offset = [{
 		'username': 'rex_chan_s',
 		'total_anime': 58,
 		'total_manga': 56,
