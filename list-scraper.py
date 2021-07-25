@@ -16,8 +16,8 @@ import requests
 from tqdm import tqdm
 
 # replace offset using str methods later
-ANIME_LINK = 'https://myanimelist.net/animelist/USERNAME/load.json?OFFSET=NUM&status=7'
-MANGA_LINK = 'https://myanimelist.net/mangalist/USERNAME/load.json?OFFSET=NUM&status=7'
+ANIME_LINK = 'https://myanimelist.net/animelist/USERNAME/load.json?offset=OFFSET&status=7'
+MANGA_LINK = 'https://myanimelist.net/mangalist/USERNAME/load.json?offset=OFFSET&status=7'
 
 IN_FILE = f'{os.getcwd()}/data/sampled-username-offset.csv'
 OUT_FILE = f'{os.getcwd()}/data/sampled-lists.csv'
