@@ -13,7 +13,6 @@ import json
 import os
 
 import requests
-from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 # replace offset using str methods later
@@ -29,7 +28,6 @@ DATA = []
 def fetch(link):
 	payload = requests.get(link)
 	return payload.json()
-	return BeautifulSoup(page.content, 'html.parser')
 
 def load_data(PATH = IN_FILE):
 	C = 0
