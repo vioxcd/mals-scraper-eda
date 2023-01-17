@@ -3,7 +3,6 @@ import time
 
 import requests
 from bs4 import BeautifulSoup
-from tqdm import tqdm
 
 ANIME_LINK = 'https://myanimelist.net/animelist/'
 MANGA_LINK = 'https://myanimelist.net/mangalist/'
@@ -51,7 +50,7 @@ if __name__ == '__main__':
 		f.write(headers)
 
 	# loop over
-	for username in tqdm(users):
+	for username in users:
 		access = {'animelist': None, 'mangalist': None}
 
 		access['animelist'] = has_access(ANIME_LINK + username)

@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 MALS_LINK = 'https://myanimelist.net'
 USERS_LINK = 'https://myanimelist.net/users.php'
-DUMP = f'{os.getcwd()}/data/dump-link.list'
+DUMP = f'{os.getcwd()}/data/dump-link.txt'
 REQ_COUNT = 600
 
 

@@ -15,7 +15,6 @@ import os
 import time
 
 import requests
-from tqdm import tqdm
 
 # replace offset using str methods later
 ANIME_LINK = 'https://myanimelist.net/animelist/USERNAME/load.json?offset=OFFSET&status=7'
@@ -60,7 +59,7 @@ if __name__ == '__main__':
 		f.write('\n')
 
 	# loop over all users
-	for u in tqdm(user_offset):
+	for u in user_offset:
 		dump = []  # lists of data dumped to file
 
 		# get data from anime
