@@ -1,4 +1,21 @@
-# Mals Anime & Manga List Scraper
+# MAL Anime & Manga List Scraper Pipeline
+
+Uses Airflow 2.5.0
+
+## Setup
+
+For comprehensive setup, see [Running Airflow in Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#)
+
+1. `mkdir -p ./dags ./logs ./plugins ./data`
+2. `echo -e "AIRFLOW_UID=$(id -u)" > .env`
+3. `docker compose up airflow-init`
+4. `docker-compose up`
+
+See `http://localhost:8080` afterwards and use `airflow` as the username and password
+
+Use `docker-compose down --volumes` for cleaninh-up
+
+## Oldies README
 
 usage:
 
@@ -10,7 +27,7 @@ usage:
 data flow (in csv):
 
 ```link (dedup) -> all profile -> filtered profile (anime & manga days > 1) -> username -> access (inaccessible marked) -> offset -> lists```
-
+)
 etc
 
 - extract-online-users: manual javascript extractor
