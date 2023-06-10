@@ -1,6 +1,8 @@
-# Mals Anime & Manga List Scraper
+# MALs Scraper and EDA
 
-usage:
+Interesting stuff is in the EDA notebook
+
+## Scraper Usage
 
 1. user-link-scraper: get 20 online users links from ```/users```
 2. user-link-deduplication: online users last longer than scraping session, so there's possible chance of duplication in scraping. deduplication erases duplicated record.
